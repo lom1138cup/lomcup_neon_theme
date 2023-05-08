@@ -1,12 +1,11 @@
 {
     "BlockRoot": {
         "Name": "MainStack",
-        "BlockType": "dock",
+        "BlockType": "stack",
         "Items": [
             {
                 "BlockType": "text",
                 "Width": "*",
-                "Height": "*",
                 "Source": "{Session.RaceType, Converter=StringToUpperString} RACE",
                 "FontName": "{F1Black}",
                 "Foreground": "#7e41d4",
@@ -17,9 +16,8 @@
                 "BlockType": "text",
                 "Width": "*",
                 "MarginTop": -2,
-                "MarginLeft": 50,
                 "FontName": "{F1Bold}",
-                "Source": "| Lom1138 Cup {Season.Name} {Session.Track.CountryName} Event",
+                "Source": " | Lom1138 Cup {Season.Name} {Session.Track.CountryName} Event",
                 "TextAlignment": "Left ",
                 "HorizontalAlignment": "Center"
             }
