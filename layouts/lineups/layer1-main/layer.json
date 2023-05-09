@@ -59,12 +59,10 @@
                 "BlockType": "itemstack",
                 "Orientation": "Vertical",
                 "Width": "*",
-                "Margin": "18, 12, 18, 24",
                 "ItemStackOptions": {
                     "ItemSource": "{Lineups.Lineups}",
                     "Template": {
                         "BlockType": "stack",
-                        "Margin": "0,0,0,4",
                         "Width": 1082,
                         "Height": 68,
                         "Orientation": "Horizontal",
@@ -73,7 +71,7 @@
                         "ColorizeBackground": {
                             "Enabled": true,
                             "Color": "{Item.Team.Color}",
-                            "BlendPercentage": 9
+                            "BlendPercentage": 80
                         },
                         "Triggers": [
                             {
@@ -165,8 +163,6 @@
                                     //driver 1
                                     {
                                         "BlockType": "dock",
-                                        "PaddingLeft": 24,
-                                        "PaddingRight": 12,
                                         "Width": 580,
                                         "Items": [
                                             {
@@ -174,27 +170,15 @@
                                                 "HorizontalAlignment": "Left",
                                                 "VerticalAlignment": "Center",
                                                 "Items": [
-                                                    //flag
-                                                    {
-                                                        "BlockType": "image",
-                                                        "Height": 48,
-                                                        "MarginRight": 12,
-                                                        "VerticalAlignment": "Center",
-                                                        "ImageOptions": {
-                                                            "Path": "{Item.Driver.Nationality.LogoPath}",
-                                                            "VerticalAlignment": "Center"
-                                                        }
-                                                    },
 
                                                     //name
                                                     {
                                                         "BlockType": "text",
                                                         "MaxWidth": 520,
-                                                        "MarginLeft": 8,
                                                         "Source": "{Item.Driver.Name}",
                                                         "HorizontalAlignment": "Left",
                                                         "VerticalAlignment": "Center",
-                                                        "FontName": "{FontNameDefault}",
+                                                        "FontName": "{FontNameBold}",
                                                         "FontSize": 40
                                                     },
 
@@ -202,7 +186,6 @@
                                                     {
                                                         "BlockType": "itemstack",
                                                         "Spacing": 4,
-                                                        "MarginLeft": 6,
                                                         "MarginTop": 4,
                                                         "ItemStackOptions": {
                                                             "ItemSource": "{Item.Driver.BadgeImages}",
@@ -218,8 +201,6 @@
                                                     {
                                                         "BlockType": "text",
                                                         "MaxWidth": 400,
-                                                        "MarginLeft": 8,
-                                                        "MarginTop": 8,
                                                         "Source": "{Item.Driver.BadgeText}",
                                                         "HorizontalAlignment": "Left",
                                                         "VerticalAlignment": "Top",
