@@ -19,14 +19,14 @@
                         "VerticalAlignment": "Center",
                         "Orientation": "Vertical",
                         "HorizontalAlignment": "Left",
-                        "Spacing": 12,
+                        "Spacing": 0,
                         "Items": [
                             {
                                 "BlockType": "text",
-                                "Opacity": 75,
+                                "Opacity": 100,
                                 "Source": "{Season.LeagueInfo.LeagueName}",
                                 "FontName": "{FontNameWide}",
-                                "Foreground": "#FFCCCCCC",
+                                "Foreground": "{ForegroundDefault}",
                                 "FontSize": 28
                             },
                             {
@@ -35,16 +35,16 @@
                                 "VerticalAlignment": "Center",
                                 "FontName": "{FontNameWide}",
                                 "FontSize": 20,
-                                "Foreground": "{ForegroundDarker}"
+                                "Foreground": "{ForegroundDefault}"
                             }
                         ]
                     },
 
                     {
                         "Name": "leagueLogo",
-                        "MarginLeft": 36,
+                        "MarginLeft":0,
                         "MarginRight": 0,
-                        "PaddingRight": 4,
+                        "PaddingRight": 0,
                         "Height": 72,
                         "BlockType": "image",
                         "HorizontalAlignment": "Right",
@@ -52,18 +52,6 @@
                         "Source": "{Season.LeagueInfo.LeagueLogo}"
                     }
                 ]
-            },
-
-            //separator
-            {
-                "Name": "separator",
-                "BlockType": "image",
-                "MarginTop": 0,
-                "MarginLeft": 24,
-                "MarginRight": 24,
-                "MarginBottom": 8,
-                "Width": "*",
-                "Source": "separator.png"
             },
 
             //lines
@@ -81,7 +69,7 @@
                         "Height": 68,
                         "Orientation": "Horizontal",
                         "VerticalAlignment": "Center",
-                        "Background": "#151515",
+                        "Background": "{BackgroundDefault}",
                         "ColorizeBackground": {
                             "Enabled": true,
                             "Color": "{Item.Team.Color}",
