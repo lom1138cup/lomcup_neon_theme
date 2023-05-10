@@ -24,7 +24,7 @@
                                 "BlockType": "text",
                                 "Opacity" : 100,
                                 "Source": "{Season.LeagueInfo.LeagueName}",
-                                "FontName": "{FontNameBold}",
+                                "FontName": "{FontNameBlack}",
                                 "FontSize": 40
                             },
                             {
@@ -77,6 +77,8 @@
                                 "FontName": "{FontNameItalic}",
                                 "Foreground": "#FFFFFF",
                                 "FontSize": 20,
+                                "PaddingLeft":24,
+                                "PaddingRight":24,
                                 "Background": "{BackgroundDefault}",
                                 "TextOptions": {
                                     "HorizontalAlignment": "Center"
@@ -130,10 +132,10 @@
                         {
                             "Template": {
                                 "BlockType": "text",
-                                "PaddingLeft": 48,
-                                "PaddingRight": 48,
+                                "PaddingLeft": 40,
+                                "PaddingRight": 10,
                                 "Background": "{BackgroundDefault}",
-                                "Source": "{Item.Date, Converter=DateToDayOfMonth}.{Item.Date, Converter=DateToMonth} {Item.Date, Converter=DateToTime}",
+                                "Source": "{Item.Date, Converter=DateToDayOfMonth}.{Item.Date, Converter=DateToMonth}",
                                 "FontSize": 24,
                                 "Foreground": "#FFFFFF",
                                 "TextOptions": {
@@ -141,9 +143,34 @@
                                     "FontName": "{FontNameDefault}"
                                 }
                             }
+                        },
+                        {
+                            "Template": {
+                                "BlockType": "text",
+                                "PaddingLeft": 10,
+                                "PaddingRight": 40,
+                                "Background": "{BackgroundDefault}",
+                                "Source": "{Item.Date, Converter=DateToTime}",
+                                "FontSize": 24,
+                                "Foreground": "#FFFFFF",
+                                "TextOptions": {
+                                    "HorizontalAlignment": "Left",
+                                    "FontName": "{FontNameDefault}"
+                                }
+                            }
                         }
                     ]
                 }
+            },
+            {
+                "BlockType": "text",
+                "Source": "All Times are in BST/GMT",
+                "HorizontalAlignment": "Center",
+                "MarginTop": 10,
+                "FontName": "{FontNameItalic}",
+                "FontSize": 20,
+                "Foreground": "{ForegroundDefault}",
+                "TextAlignment": "Center"
             }
         ]
     }
