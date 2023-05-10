@@ -7,16 +7,15 @@
                 "BlockType": "text",
                 "Width": "*",
                 "Source": "{Session.RaceType, Converter=StringToUpperString} RACE",
-                "FontName": "{F1Black}",
-                "Foreground": "#7e41d4",
+                "FontName": "{FontNameBlack}",
+                "Foreground": "{ForegroundDefault}",
                 "TextAlignment": "Center",
                 "HorizontalAlignment": "Left"
             },
             {
                 "BlockType": "text",
                 "Width": "*",
-                "MarginTop": -2,
-                "FontName": "{F1Bold}",
+                "FontName": "{FontNameBold}",
                 "Source": " | Lom1138 Cup {Season.Name} {Session.Track.CountryName} Event",
                 "TextAlignment": "Left ",
                 "HorizontalAlignment": "Center"
