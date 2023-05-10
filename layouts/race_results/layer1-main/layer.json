@@ -179,7 +179,7 @@
                             "Template": {
                                 "BlockType": "dock",
                                 "Padding": "24, 0",
-                                "Background": "{BackgroundAlt}",
+                                "Background": "{ForegroundDefault}",
                                 "HorizontalAlignment": "Center",
                                 "Items": [
                                     {
@@ -190,7 +190,8 @@
                                         "TextOptions": {
                                             "FontName": "{FontNameDefault}",
                                             "FontSize": 32,                                            
-                                            "HorizontalAlignment": "Center"
+                                            "HorizontalAlignment": "Center",
+                                            "Foreground": "{BackgroundDefault}"
                                         }
                                     }
                                 ]

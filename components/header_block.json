@@ -21,18 +21,9 @@
                         {                            
                             "BlockType": "text",
                             "Source": "{Season.LeagueInfo.LeagueName}",                            
-                            "FontName": "{FontNameWide}",
+                            "FontName": "{FontNameBlack}",
                             "FontSize": 20
-                        },
-                        {                            
-                            "BlockType": "text",
-                            "Source": " · {Season.Name}",
-                            "VerticalAlignment" : "Center",
-                            "FontName": "{FontNameWide}",
-                            "FontSize": 16,
-                            "Foreground" : "{ForegroundDarker}"
-                        }
-                    ]
+                        }]
                 },       
 
                 //main header
@@ -88,7 +79,7 @@
                                 {
                                     "BlockType": "text",
                                     "HorizontalAlignment": "Right",
-                                    "Source": "[Round] {Season.SeasonCurrentNumberEvent} [of] {Season.SeasonOverallNumberEvents}",
+                                    "Source": "After [Round] {Season.SeasonCurrentNumberEvent} [of] {Season.SeasonOverallNumberEvents}",
                                     "FontName": "{FontNameWide}",
                                     "Foreground" : "{ForegroundDarker}",
                                     "FontSize": 18

@@ -17,8 +17,8 @@
     //colors
     "ForegroundDarker": "#FF969696",
     "TableColumnHeaderForeground": "#AABBBBBB",
-    "PenaltyTimeGameForeground": "#BB7373",
-    "PenaltyTimeStewardsForeground": "#F03232",
+    "PenaltyTimeGameForeground": "#DA0200",
+    "PenaltyTimeStewardsForeground": "#DA0200",
     "FastestLapRaceSelectedForeground": "#DC46DC",
     "FastestLapRaceStickerBackground": "#20CC00CC",
     "DriverDayRaceStickerBackground": "#2000CC00",
@@ -39,9 +39,5 @@
     "SeasonProgressPointsZeroForeground": "#666666",
     "SeasonProgressPointsTopForeground": "#C2C2C2",
     "SeasonProgressPointsFastestLapForeground": "#C719C7",
-    "SeasonProgressPointsPoleBackground": "#420012",
-
-    //Replacement Names
-    "United States of America": "USA",
-    "United Arab Emirates": "UAE"
+    "SeasonProgressPointsPoleBackground": "#420012"
 }

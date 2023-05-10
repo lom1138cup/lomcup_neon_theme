@@ -46,7 +46,7 @@
                             [
                                 {
                                     "Property" : "Foreground",
-                                    "Value" : "#0E8F17"
+                                    "Value" : "#A8FF00"
                                 }
                             ]
                         },
@@ -56,7 +56,7 @@
                             [
                                 {
                                     "Property" : "Foreground",
-                                    "Value" : "#9B0909"
+                                    "Value" : "#DA0200"
                                 }
                             ]
                         }

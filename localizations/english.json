@@ -3,7 +3,7 @@
     "Qual" : "Qual",
     "Practice" : "Practice",
     "Round" : "Round",
-    "of" : "of",
+    "of" : "out of",
     "laps" : "laps",
     "min" : "min",
     "Interval" : "Interval",
@@ -12,5 +12,8 @@
     "Stints" : "Stints",
     "Pts" : "Pts",
     "Time" : "Time",
-    "Laps" : "Laps"
+    "Laps" : "Laps",
+    "United States Of America": "COTA",
+    "United Arab Emirates": "UAE",
+    "United Kingdom": "UK"
 }

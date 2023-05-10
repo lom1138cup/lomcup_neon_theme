@@ -14,7 +14,7 @@
                 {
                     "Vars":
                     {
-                        "header" : "Season penalties"
+                        "header" : "PENALTY POINTS"
                     }
                 }               
             },
@@ -76,7 +76,7 @@
 
                   //points
                   {
-                    "Header": "PPA",
+                    "Header": "Active",
                     "MarginLeft": 20,
                     "Template": {
 
@@ -99,7 +99,7 @@
                   },
 
                   {
-                    "Header": "WA",
+                    "Header": "Warns",
                     "MarginLeft": 20,
                     "Template": {
                       "BlockType": "text",
@@ -113,7 +113,7 @@
                   },
 
                   {
-                    "Header": "PTS",
+                    "Header": "Stewards",
                     "MarginLeft": 20,
                     "Template": {
                       "BlockType": "text",
@@ -126,7 +126,7 @@
                   },
 
                   {
-                    "Header": "PPS",
+                    "Header": "Positions",
                     "MarginLeft": 0,
                     "Template": {
                       "BlockType": "text",
@@ -139,7 +139,7 @@
                   },
 
                   {
-                    "Header": "PTG",
+                    "Header": "Game",
                     "MarginLeft": 0,
                     "Template": {
                       "BlockType": "text",
@@ -152,7 +152,7 @@
                   },
 
                   {
-                    "Header": "PPO",
+                    "Header": "All-Time",
                     "MarginLeft": 0,
                     "Template": {
                       "BlockType": "text",
@@ -165,7 +165,7 @@
                   },
 
                   {
-                    "Header": "WO",
+                    "Header": "Warns-AT",
                     "MarginLeft": 0,
                     "Template": {
                       "BlockType": "text",
@@ -178,30 +178,6 @@
                   }
                 ]
               }
-            },
-
-            //footer
-            {
-                "BlockType": "dock",
-                "Width": "*",
-                "Height": "*",
-                "Margin": "8, 28, 8, 0",
-                "HorizontalAlignment" : "Left",
-                "Spacing": 0,
-                "Items": [
-                    {
-                        "BlockType": "text",
-                        "Width": "1360",
-                        "Foreground": "#85CCCCCC",
-                        "Height": "*",
-                        "Source": "PPA - active penalty points, WA - active warnings, PTS - penalty time (seconds) by stewards, PPS - penalty positions by stewards, PTG - penalty time (seconds) by game, PPO - penalty points overall, WO - warnings overall",
-                        "TextOptions": {
-                            "FontSize": 22,
-                            "Wrap": true,
-                            "HorizontalAlignment": "Left"
-                        }
-                    }
-                ]
             }
         ]
     }

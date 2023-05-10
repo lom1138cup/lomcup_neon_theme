@@ -23,13 +23,14 @@
                             {
                                 "BlockType": "text",
                                 "Opacity" : 100,
-                                "Source": "{Season.LeagueInfo.LeagueName}",
+                                "Source": "Race Lap Records",
                                 "FontName": "{FontNameBlack}",
-                                "FontSize": 40
+                                "FontSize": 40,
+                                "VerticalAlignment": "Center"
                             },
                             {
                                 "BlockType": "text",
-                                "Source": " | {Season.Name}",
+                                "Source": " on {Season.Name} Calendar",
                                 "VerticalAlignment": "Center",
                                 "FontName": "{FontNameItalic}",
                                 "FontSize": 30,
@@ -128,20 +129,34 @@
                             }
                         },
 
-                        //date
+                        //time
                         {
                             "Template": {
                                 "BlockType": "text",
                                 "PaddingLeft": 40,
-                                "PaddingRight": 10,
+                                "PaddingRight": 40,
                                 "Background": "{BackgroundDefault}",
-                                "Source": "{Item.Date, Converter=DateToDayOfMonth}.{Item.Date, Converter=DateToMonth}",
+                                "Source": "{Item.Track.RaceLapRecordTime}",
                                 "FontSize": 24,
                                 "Foreground": "#FFFFFF",
                                 "TextOptions": {
                                     "HorizontalAlignment": "Center",
                                     "FontName": "{FontNameDefault}"
-                                }
+                                },
+                                "Triggers":[
+                                    {
+                                        "Condition": "{Item.Track.RaceLapRecordTime, Converter=StringEquals, Parameter=0.000}",
+                                        "Setters":[{
+                                            "Property": "Source",
+                                            "Value": "UNKNOWN",
+                                        },
+                                        {
+                                            "Property": "Foreground",
+                                            "Value": "#DB0200"
+                                        }]
+                                        
+                                    }
+                                ]
                             }
                         },
                         {
@@ -150,7 +165,7 @@
                                 "PaddingLeft": 10,
                                 "PaddingRight": 40,
                                 "Background": "{BackgroundDefault}",
-                                "Source": "{Item.Date, Converter=DateToTime}",
+                                "Source": "{Item.Track.RaceLapRecordDriver}",
                                 "FontSize": 24,
                                 "Foreground": "#FFFFFF",
                                 "TextOptions": {
@@ -164,7 +179,7 @@
             },
             {
                 "BlockType": "text",
-                "Source": "All Times are in {TimeZone}",
+                "Source": "Data might be inaccurate due to software",
                 "HorizontalAlignment": "Center",
                 "MarginTop": 10,
                 "FontName": "{FontNameItalic}",
