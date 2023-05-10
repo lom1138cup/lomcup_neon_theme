@@ -164,7 +164,7 @@
             },
             {
                 "BlockType": "text",
-                "Source": "All Times are in BST/GMT",
+                "Source": "All Times are in {TimeZone}",
                 "HorizontalAlignment": "Center",
                 "MarginTop": 10,
                 "FontName": "{FontNameItalic}",
