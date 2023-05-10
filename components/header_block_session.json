@@ -26,11 +26,12 @@
                         },
                         {                            
                             "BlockType": "text",
-                            "Source": " · {Season.Name}",
+                            "MarginLeft":5,
+                            "Source": "{Season.Name}",
                             "VerticalAlignment" : "Center",
                             "FontName": "{FontNameWide}",
-                            "FontSize": 16,
-                            "Foreground" : "{ForegroundDarker}"
+                            "FontSize": 20,
+                            "Foreground" : "{ForegroundAlt}"
                         }
                     ]
                 },                
@@ -63,13 +64,12 @@
                         {
                             "Name": "LocationName",
                             "BlockType": "text",
-                            //"MarginLeft": 12,
-                            //"MarginTop": 2,
+                            "MarginLeft": 2,
                             "VerticalAlignment": "Center",
-                            "Source": "  ·  {Session.Track.CircuitName}",
+                            "Source": "{Session.Track.CircuitName}",
                             "FontName": "{FontNameWide}",                            
-                            "FontSize": 18,
-                            "Foreground" : "{ForegroundDarker}"
+                            "FontSize": 28,
+                            "Foreground" : "{ForegroundAlt}"
                         }
                     ]
                 }
@@ -107,7 +107,7 @@
                                     "Items": [
                                         {
                                             "BlockType": "text",
-                                            "Source": "[{Session.SessionType}]",
+                                            "Source": "[{Session.SessionType}]:",
                                             "FontName": "{FontNameWide}",
                                             "FontSize": 18
                                         },
@@ -115,7 +115,8 @@
                                         {
                                             "BlockType": "text",                                            
                                             "RenderIf": false,
-                                            "Source": " • {Session.TotalLaps} [laps]",
+                                            "MarginLeft": 5,
+                                            "Source": "{Session.TotalLaps} [laps]",
                                             "FontName": "{FontNameWide}",
                                             "FontSize": 18,
                                             "Triggers" : 
@@ -132,7 +133,8 @@
                                         {
                                             "BlockType": "text",                                                                                  
                                             "RenderIf": false,
-                                            "Source": " • {Session.SessionDurationMinutes} [min].",
+                                            "MarginLeft": 5,
+                                            "Source": "{Session.SessionDurationMinutes} [min].",
                                             "FontName": "{FontNameWide}",
                                             "FontSize": 18,
                                             "Triggers" : 
@@ -175,7 +177,7 @@
                         {
                             "Name": "leagueLogo",
                             "BlockType": "image",
-                            "Height": 82,
+                            "Height": 100,
                             "MarginLeft": 36,
                             "Source": "{Season.LeagueInfo.LeagueLogo}"
                         }

@@ -1,6 +1,6 @@
 {
     "BlockType" : "dock",
-    "Background": "{BackgroundDefault}",
+    "Background": "{BackgroundAlt}",
     "Items":
     [
         {                                

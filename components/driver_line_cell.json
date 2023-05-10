@@ -2,11 +2,11 @@
     "BlockType": "dock",
     "PaddingLeft": 12,
     "PaddingRight": 4,
-    "Background": "{BackgroundDefault}",
+    "Background": "{BackgroundAlt}",
     "ColorizeBackground": {
         "Enabled": false,
         "Color": "#FFFF00",
-        "BlendPercentage": 10
+        "BlendPercentage": 50
     },
     "Triggers": [
         {
@@ -96,7 +96,6 @@
                         {
                             "BlockType": "text",
                             "Source": "{Item.Team.Name}",
-                            //"MarginRight": 4,
                             "HorizontalAlignment": "Left",
                             "VerticalAlignment": "Center",
                             "FontName": "{FontNameDefault}",
