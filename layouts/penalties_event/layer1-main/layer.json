@@ -36,8 +36,8 @@
                                         "Source": " | {Season.Name}",
                                         "VerticalAlignment": "Center",
                                         "FontName": "{FontNameWide}",
-                                        "FontSize": 16,
-                                        "Foreground": "{ForegroundDarker}"
+                                        "FontSize": 20,
+                                        "Foreground": "{ForegroundAlt}"
                                     }
                                 ]
                             },
@@ -73,10 +73,10 @@
                                         //"MarginLeft": 12,
                                         //"MarginTop": 2,
                                         "VerticalAlignment": "Center",
-                                        "Source": "  ·  {Event.Track.CircuitName}",
+                                        "Source": " | {Event.Track.CircuitName}",
                                         "FontName": "{FontNameWide}",
-                                        "FontSize": 18,
-                                        "Foreground": "{ForegroundDarker}"
+                                        "FontSize": 28,
+                                        "Foreground": "{ForegroundAlt}"
                                     }
                                 ]
                             }
@@ -103,10 +103,10 @@
                                                 "BlockType": "text",
                                                 "HorizontalAlignment": "Right",
                                                 "VerticalAlignment" : "Center",
-                                                "Source": "Penalties",
-                                                "FontName": "{FontNameWide}",
-                                                "FontSize": 24,
-                                                "Foreground": "{ForegroundDarker}"
+                                                "Source": "Event Penalties",
+                                                "FontName": "{FontNameBlack}",
+                                                "FontSize": 40,
+                                                "Foreground": "{ForegroundDefault}"
                                             }
                                         ]
                                     }
