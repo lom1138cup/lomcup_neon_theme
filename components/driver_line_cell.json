@@ -2,7 +2,7 @@
     "BlockType": "dock",
     "PaddingLeft": 12,
     "PaddingRight": 4,
-    "Background": "{BackgroundAlt}",
+    "Background": "{BackgroundDefault}",
     "ColorizeBackground": {
         "Enabled": false,
         "Color": "#FFFF00",
@@ -40,6 +40,7 @@
                     "MaxWidth": 600,
                     "MarginLeft": 8,
                     "Source": "{Item.Driver.Name}",
+                    "Foreground": "{ForegroundAlt}",
                     "HorizontalAlignment": "Left",
                     "VerticalAlignment": "Center",
                     "FontName": "{FontNameDefault}",
