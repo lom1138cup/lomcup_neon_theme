@@ -148,7 +148,7 @@
                                         "Condition": "{Item.Track.RaceLapRecordTime, Converter=StringEquals, Parameter=0.000}",
                                         "Setters":[{
                                             "Property": "Source",
-                                            "Value": "UNKNOWN",
+                                            "Value": "UNAVAILABLE",
                                         },
                                         {
                                             "Property": "Foreground",
