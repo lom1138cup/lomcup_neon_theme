@@ -13,7 +13,10 @@
     "Pts" : "Pts",
     "Time" : "Time",
     "Laps" : "Laps",
-    "United States Of America": "COTA",
+    "United States Of America": "USA",
     "United Arab Emirates": "UAE",
-    "United Kingdom": "UK"
+    "United Kingdom": "UK",
+    "Downtown Core": "Marina Bay",
+    "Stavelot": "Spa",
+    "Mogyoród": "Budapest"
 }

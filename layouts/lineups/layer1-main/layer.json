@@ -175,7 +175,7 @@
                                                     //name
                                                     {
                                                         "BlockType": "text",
-                                                        "Source": "{Item.Driver.Name}",
+                                                        "Source": "{Item.Driver.16}",
                                                         "HorizontalAlignment": "Left",
                                                         "VerticalAlignment": "Center",
                                                         "FontName": "{FontNameBold}",

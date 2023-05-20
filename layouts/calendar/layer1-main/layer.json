@@ -117,7 +117,7 @@
                             "Template": {
                                 "BlockType": "text",
                                 "PaddingLeft": 24,
-                                "PaddingRight": 56,
+                                "PaddingRight": 5,
                                 "Source": "[{Item.Track.CountryName}]",
                                 "HorizontalAlignment": "Center",
                                 "VerticalAlignment": "Center",
@@ -125,8 +125,24 @@
                                 "Foreground": "#FFFFFF",
                                 "FontSize": 32,
                                 "Background": "{BackgroundAlt}"
-                            }
-                        },
+                            }},
+                            {
+                            "WidthStretch": true,
+                            "Template": {
+                                "BlockType": "text",
+                                "PaddingRight": 56,
+                                "PaddingLeft": 5,
+                                "Source": "[{Item.Track.LocationName}]",
+                                "HorizontalAlignment": "Center",
+                                "VerticalAlignment": "Center",
+                                "FontName": "{FontNameBold}",
+                                "Foreground": "#FFFFFF",
+                                "FontSize": 24,
+                                "Background": "{BackgroundDefault}",
+                                "TextOptions":{
+                                    
+                                }
+                            }},
 
                         //date
                         {
@@ -134,10 +150,10 @@
                                 "BlockType": "text",
                                 "PaddingLeft": 40,
                                 "PaddingRight": 10,
-                                "Background": "{BackgroundDefault}",
+                                "Background": "{ForegroundDefault}",
                                 "Source": "{Item.Date, Converter=DateToDayOfMonth}.{Item.Date, Converter=DateToMonth}",
                                 "FontSize": 24,
-                                "Foreground": "#FFFFFF",
+                                "Foreground": "{BackgroundDefault}",
                                 "TextOptions": {
                                     "HorizontalAlignment": "Center",
                                     "FontName": "{FontNameDefault}"
