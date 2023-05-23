@@ -1,7 +1,6 @@
 {
     "BlockType": "dock",
-    "PaddingLeft": 12,
-    "PaddingRight": 4,    
+    "PaddingLeft": 12,   
     "Background": "{BackgroundDefault}",
     "ColorizeBackground": {
         "Enabled": false,
@@ -16,6 +15,25 @@
         }
     ],
     "Items": [
+        {
+            "BlockType": "stack",
+            "HorizontalAlignment": "Left",
+            "VerticalAlignment": "Center",
+            "Items": [
+                //color
+                {                    
+                    "BlockType": "shape",
+                    "VerticalAlignment": "Center",
+                    "Width" : 20,
+                    "Height": 70,
+                    "ShapeOptions" : 
+                    {
+                        "Type" : "Rectangle",
+                        "Fill" : "{Item.Team.Color}"
+                    }                    
+                }                
+            ]
+        },
         //left part
         {
             "BlockType": "stack",                    
@@ -38,37 +56,18 @@
                 //name
                 {
                     "BlockType": "text",
-                    "MaxWidth": 600,                    
+                    "MaxWidth": 600,
+                    "Foreground": "{ForegroundAlt}",                    
                     "Source": "{Item.Team.Name}",
                     "HorizontalAlignment": "Left",
                     "VerticalAlignment": "Center",
                     "FontName": "{FontNameDefault}",
-                    "FontSize": 42
+                    "FontSize": 42,
                 }               
             ]
-        },
+        }
 
         //right part
-        {
-            "BlockType": "stack",           
-            "MarginRight": 16,
-            "HorizontalAlignment": "Right",
-            "VerticalAlignment": "Center",
-            "Items": [
-                //color
-                {                    
-                    "BlockType": "shape",
-                    "VerticalAlignment": "Center",
-                    "Width" : 10,
-                    "Height": 48,
-                    "Opacity" : 45,
-                    "ShapeOptions" : 
-                    {
-                        "Type" : "Rectangle",
-                        "Fill" : "{Item.Team.Color}"
-                    }                    
-                }                
-            ]
-        }
+        
     ]
 }

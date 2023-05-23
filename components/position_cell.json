@@ -6,7 +6,7 @@
     "BackgroundImage": "position_bg.png",
     "FontName": "{FontNameDefault}",
     "FontSize": 40,
-    "Foreground": "303030",
+    "Foreground": "{BackgroundDefault}",
     "TextOptions": {
         "HorizontalAlignment": "Center"       
     }

@@ -22,7 +22,7 @@
                             "BlockType": "text",
                             "Source": "{Season.LeagueInfo.LeagueName}",                            
                             "FontName": "{FontNameBlack}",
-                            "FontSize": 20
+                            "FontSize": 40
                         }]
                 },       
 
@@ -41,19 +41,17 @@
                         {
                             "BlockType": "text",                            
                             "VerticalAlignment": "Center",                            
-                            "Source": "<header>",
+                            "Source": "<header> ",
                             "FontName": "{FontNameWide}",
-                            "FontSize": 28
+                            "FontSize": 30
                         },
 
                         {                            
-                            "BlockType": "text",                                                                         
-                            "MarginLeft": 12,
-                            "MarginTop": 4,
+                            "BlockType": "text",
                             "VerticalAlignment": "Center",
                             "Source": "<subHeader>",
                             "FontName": "{FontNameWide}",
-                            "FontSize": 18
+                            "FontSize": 30
                         }
                     ]
                 }

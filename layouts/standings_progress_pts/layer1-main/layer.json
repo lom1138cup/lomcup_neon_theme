@@ -11,8 +11,8 @@
                 "ComponentName": "header_block",
                 "ComponentOptions": {
                     "Vars": {
-                        "header": "Season progress",
-                        "subHeader": "/ points"
+                        "header": "Standings",
+                        "subHeader": "| Points Progress"
                     }
                 }
             },
@@ -137,7 +137,7 @@
                                     }
                                 ]
                             },
-                            "Width": 72,
+                            "Width": "80",
                             "Template": {
                                 "Padding": "12, 0",
                                 "Background": "{BackgroundDefault}",
@@ -156,7 +156,11 @@
                                         "Setters": [
                                             {
                                                 "Property": "Source",
-                                                "Value": ""
+                                                "Value": "-"
+                                            },
+                                            {
+                                                "Property": "FontSize",
+                                                "Value": 60
                                             }
                                         ]
                                     },
@@ -166,15 +170,6 @@
                                             {
                                                 "Property": "Foreground",
                                                 "Value": "{SeasonProgressPointsZeroForeground}"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "Condition": "{Item.Points, Converter=NumberGreater, Parameter=149}",
-                                        "Setters": [
-                                            {
-                                                "Property": "Foreground",
-                                                "Value": "{SeasonProgressPointsTopForeground}"
                                             }
                                         ]
                                     },
@@ -193,6 +188,10 @@
                                             {
                                                 "Property": "Background",
                                                 "Value": "{SeasonProgressPointsPoleBackground}"
+                                            },
+                                            {
+                                                "Property": "Foreground",
+                                                "Value": "#272727"
                                             }
                                         ]
                                     },
@@ -200,7 +199,7 @@
                                         "Condition": "{Item.IsWorstEvent}",
                                         "Setters": [
                                             {
-                                                "Property": "Foreground",
+                                                "Property": "Background",
                                                 "Value": "{SeasonProgressPositionWorstEventForeground}"
                                             }
                                         ]
@@ -210,6 +209,16 @@
                         }
                     ]
                 }
+            },
+            {
+                "BlockType": "text",
+                "Source": "Pole Position",
+                "HorizontalAlignment": "Center",
+                "MarginTop": 10,
+                "FontName": "{FontNameBold}",
+                "FontSize": 30,
+                "Foreground": "#8182FF",
+                "TextAlignment": "Center"
             }
         ]
     }

@@ -32,12 +32,12 @@
     "StandingsPenaltyPointCountForeground": "#BC0505",
     "SeasonProgressPositionDefaultForeground": "#999999",
     "SeasonProgressPositionNotClassifiedForeground": "#999999",
-    "SeasonProgressPositionWorstEventForeground": "#585858",
+    "SeasonProgressPositionWorstEventForeground": "#00000",
     "SeasonProgressPositionTop10Foreground": "#CCCCCC",
     "SeasonProgressPositionTop1Foregound": "#DDDD11",
     "SeasonProgressPointsForeground": "#AFAFAF",
     "SeasonProgressPointsZeroForeground": "#666666",
     "SeasonProgressPointsTopForeground": "#C2C2C2",
     "SeasonProgressPointsFastestLapForeground": "#C719C7",
-    "SeasonProgressPointsPoleBackground": "#420012"
+    "SeasonProgressPointsPoleBackground": "#8182ff"
 }
