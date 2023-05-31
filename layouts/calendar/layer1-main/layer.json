@@ -187,6 +187,16 @@
                 "FontSize": 20,
                 "Foreground": "{ForegroundDefault}",
                 "TextAlignment": "Center"
+            },
+            {
+                "BlockType": "text",
+                "Source": "Las Vegas can be voted on in #votes",
+                "HorizontalAlignment": "Center",
+                "MarginTop": 10,
+                "FontName": "{FontNameItalic}",
+                "FontSize": 20,
+                "Foreground": "{ForegroundDefault}",
+                "TextAlignment": "Center"
             }
         ]
     }
