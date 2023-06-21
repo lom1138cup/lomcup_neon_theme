@@ -71,7 +71,7 @@
                         {
                             "Template": {
                                 "BlockType": "text",
-                                "Source": "{Item.Position}",
+                                "Source": "{Item.Position, Converter=NumberSubtract, Parameter=4}",
                                 "HorizontalAlignment": "Center",
                                 "VerticalAlignment": "Center",
                                 "FontName": "{FontNameItalic}",
@@ -82,7 +82,18 @@
                                 "Background": "{BackgroundDefault}",
                                 "TextOptions": {
                                     "HorizontalAlignment": "Center"
-                                }
+                                },
+                                "Triggers":[
+                                    {
+                                        "Condition":"{Item.IsChampionshipStatus, Converter=BoolReverse}",
+                                        "Setters":[
+                                            {
+                                                "Property": "Source",
+                                                "Value": "T"
+                                            }
+                                        ]
+                                    }
+                                ]
                             }
                         },
 
@@ -124,7 +135,22 @@
                                 "FontName": "{FontNameBold}",
                                 "Foreground": "#FFFFFF",
                                 "FontSize": 32,
-                                "Background": "{BackgroundAlt}"
+                                "Background": "{BackgroundAlt}",
+                                "Triggers": [
+                                    {
+                                        "Condition": "{Item.IsChampionshipStatus, Converter=BoolReverse}",
+                                        "Setters": [
+                                            {
+                                                "Property": "Foreground",
+                                                "Value": "#808080"
+                                            },
+                                            {
+                                                "Property": "Source",
+                                                "Value": "(Test) [{Item.Track.LocationName}]"
+                                            }
+                                        ]
+                                    }
+                                ]
                             }},
                             {
                             "WidthStretch": true,
@@ -141,7 +167,18 @@
                                 "Background": "{BackgroundDefault}",
                                 "TextOptions":{
                                     
-                                }
+                                },
+                                "Triggers": [
+                                    {
+                                        "Condition": "{Item.IsChampionshipStatus, Converter=BoolReverse}",
+                                        "Setters": [
+                                            {
+                                                "Property": "Foreground",
+                                                "Value": "#808080"
+                                            }
+                                        ]
+                                    }
+                                ]
                             }},
 
                         //date
@@ -157,7 +194,18 @@
                                 "TextOptions": {
                                     "HorizontalAlignment": "Center",
                                     "FontName": "{FontNameDefault}"
-                                }
+                                },
+                                "Triggers": [
+                                    {
+                                        "Condition": "{Item.IsChampionshipStatus, Converter=BoolReverse}",
+                                        "Setters": [
+                                            {
+                                                "Property": "Foreground",
+                                                "Value": "#808080"
+                                            }
+                                        ]
+                                    }
+                                ]
                             }
                         },
                         {
@@ -172,7 +220,18 @@
                                 "TextOptions": {
                                     "HorizontalAlignment": "Left",
                                     "FontName": "{FontNameDefault}"
-                                }
+                                },
+                                "Triggers": [
+                                    {
+                                        "Condition": "{Item.IsChampionshipStatus, Converter=BoolReverse}",
+                                        "Setters": [
+                                            {
+                                                "Property": "Foreground",
+                                                "Value": "#808080"
+                                            }
+                                        ]
+                                    }
+                                ]
                             }
                         }
                     ]
@@ -188,16 +247,6 @@
                 "Foreground": "{ForegroundDefault}",
                 "TextAlignment": "Center"
             },
-            {
-                "BlockType": "text",
-                "Source": "Las Vegas can be voted on in #votes",
-                "HorizontalAlignment": "Center",
-                "MarginTop": 10,
-                "FontName": "{FontNameItalic}",
-                "FontSize": 20,
-                "Foreground": "{ForegroundDefault}",
-                "TextAlignment": "Center"
-            }
-        ]
-    }
+        ],
+    },
 }
