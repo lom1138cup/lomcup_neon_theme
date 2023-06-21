@@ -1,0 +1,252 @@
+{
+    "BlockRoot": {
+        "Name": "mainStack",
+        "BlockType": "stack",
+        "Margin": "0, 0, 0, 12",
+
+        "Orientation": "Vertical",
+        "Items": [
+            //header block
+            {
+                "BlockType": "dock",
+                "VerticalAlignment": "Center",
+                "Margin": "0, 0, 0, 8",
+                //"Background": "{BackgroundDefault}",
+                "Padding": "42, 16, 42, 0",
+                "Items": [
+                    //league name
+                    {
+                        "BlockType": "stack",
+                        "VerticalAlignment": "Center",
+                        "HorizontalAlignment": "Left",
+                        "Items": [
+                            {
+                                "BlockType": "text",
+                                "Opacity" : 100,
+                                "Source": "{Season.LeagueInfo.LeagueName}",
+                                "FontName": "{FontNameBlack}",
+                                "FontSize": 40
+                            },
+                            {
+                                "BlockType": "text",
+                                "Source": " | {Season.Name}",
+                                "VerticalAlignment": "Center",
+                                "FontName": "{FontNameItalic}",
+                                "FontSize": 30,
+                                "Foreground": "{ForegroundDefault}"
+                            }
+                        ]
+                    },
+
+                    {
+                        "Name": "leagueLogo",
+                        "MarginLeft": 36,
+                        "MarginRight": 0,
+                        "Height": 56,
+                        "BlockType": "image",
+                        "HorizontalAlignment": "Right",
+                        "VerticalAlignment": "Center",
+                        "Source": "{Season.LeagueInfo.LeagueLogo}"
+                    }
+                ]
+            },            
+
+            //table
+            {
+                "Name": "mainTable",
+                "BlockType": "table",
+                "Margin": "{MarginTable}",
+                "MarginRight": 0,                
+                "TableOptions": {
+                    "ItemsSource": "{Events.Events}",
+                    "RowSpacing": 0,
+                    "ColSpacing": 0,
+                    "HeaderTemplate": {
+                        "BlockType": "text",
+                        "MarginBottom": 8,
+                        "TextOptionsExtern" : "tableColumnHeader"
+                    },
+                    "Columns": [
+                        //number
+                        {
+                            "Template": {
+                                "BlockType": "text",
+                                "Source": "{Item.Position}",
+                                "HorizontalAlignment": "Center",
+                                "VerticalAlignment": "Center",
+                                "FontName": "{FontNameItalic}",
+                                "Foreground": "#FFFFFF",
+                                "FontSize": 20,
+                                "PaddingLeft":24,
+                                "PaddingRight":24,
+                                "Background": "{BackgroundDefault}",
+                                "TextOptions": {
+                                    "HorizontalAlignment": "Center"
+                                },
+                                "Triggers":[
+                                    {
+                                        "Condition":"{Item.IsChampionshipStatus, Converter=BoolReverse}",
+                                        "Setters":[
+                                            {
+                                                "Property": "Source",
+                                                "Value": "T"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+
+                        {
+                            "Template": {
+                                "BlockType": "stack",
+                                "PaddingLeft": 32,
+                                "PaddingRight": 32,
+                                "HorizontalAlignment": "Left",
+                                "VerticalAlignment": "Center",
+                                "Background": "{BackgroundAlt}",
+                                "Items": [
+                                    //flag
+                                    {
+                                        "BlockType": "image",
+                                        "Height": 56,
+                                        "PaddingTop": 8,
+                                        "PaddingBottom": 8,
+                                        "VerticalAlignment": "Center",
+                                        "ImageOptions": {
+                                            "Path": "{Item.Track.Nation.LogoPath}",
+                                            "VerticalAlignment": "Center"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+
+                        //location
+                        {
+                            "WidthStretch": true,
+                            "Template": {
+                                "BlockType": "text",
+                                "PaddingLeft": 24,
+                                "PaddingRight": 5,
+                                "Source": "[{Item.Track.CountryName}]",
+                                "HorizontalAlignment": "Center",
+                                "VerticalAlignment": "Center",
+                                "FontName": "{FontNameBold}",
+                                "Foreground": "#FFFFFF",
+                                "FontSize": 32,
+                                "Background": "{BackgroundAlt}",
+                                "Triggers": [
+                                    {
+                                        "Condition": "{Item.IsChampionshipStatus, Converter=BoolReverse}",
+                                        "Setters": [
+                                            {
+                                                "Property": "Foreground",
+                                                "Value": "#808080"
+                                            },
+                                            {
+                                                "Property": "Source",
+                                                "Value": "(Test) [{Item.Track.LocationName}]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }},
+                            {
+                            "WidthStretch": true,
+                            "Template": {
+                                "BlockType": "text",
+                                "PaddingRight": 56,
+                                "PaddingLeft": 5,
+                                "Source": "[{Item.Track.LocationName}]",
+                                "HorizontalAlignment": "Center",
+                                "VerticalAlignment": "Center",
+                                "FontName": "{FontNameBold}",
+                                "Foreground": "#FFFFFF",
+                                "FontSize": 24,
+                                "Background": "{BackgroundDefault}",
+                                "TextOptions":{
+                                    
+                                },
+                                "Triggers": [
+                                    {
+                                        "Condition": "{Item.IsChampionshipStatus, Converter=BoolReverse}",
+                                        "Setters": [
+                                            {
+                                                "Property": "Foreground",
+                                                "Value": "#808080"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }},
+
+                        //date
+                        {
+                            "Template": {
+                                "BlockType": "text",
+                                "PaddingLeft": 40,
+                                "PaddingRight": 10,
+                                "Background": "{ForegroundDefault}",
+                                "Source": "{Item.Date, Converter=DateToDayOfMonth}.{Item.Date, Converter=DateToMonth}",
+                                "FontSize": 24,
+                                "Foreground": "{BackgroundDefault}",
+                                "TextOptions": {
+                                    "HorizontalAlignment": "Center",
+                                    "FontName": "{FontNameDefault}"
+                                },
+                                "Triggers": [
+                                    {
+                                        "Condition": "{Item.IsChampionshipStatus, Converter=BoolReverse}",
+                                        "Setters": [
+                                            {
+                                                "Property": "Foreground",
+                                                "Value": "#808080"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Template": {
+                                "BlockType": "text",
+                                "PaddingLeft": 10,
+                                "PaddingRight": 40,
+                                "Background": "{BackgroundDefault}",
+                                "Source": "{Item.Date, Converter=DateToTime}",
+                                "FontSize": 24,
+                                "Foreground": "#FFFFFF",
+                                "TextOptions": {
+                                    "HorizontalAlignment": "Left",
+                                    "FontName": "{FontNameDefault}"
+                                },
+                                "Triggers": [
+                                    {
+                                        "Condition": "{Item.IsChampionshipStatus, Converter=BoolReverse}",
+                                        "Setters": [
+                                            {
+                                                "Property": "Foreground",
+                                                "Value": "#808080"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "BlockType": "text",
+                "Source": "All Times are in {TimeZone}",
+                "HorizontalAlignment": "Center",
+                "MarginTop": 10,
+                "FontName": "{FontNameItalic}",
+                "FontSize": 20,
+                "Foreground": "{ForegroundDefault}",
+                "TextAlignment": "Center"
+            },
+        ],
+    },
+}
