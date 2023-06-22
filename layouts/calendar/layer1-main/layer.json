@@ -25,7 +25,9 @@
                                 "Opacity" : 100,
                                 "Source": "{Season.LeagueInfo.LeagueName}",
                                 "FontName": "{FontNameBlack}",
-                                "FontSize": 40
+                                "FontSize": 40,
+                                "Foreground": "{ForegroundDefault}"
+                            }]
                             },
                             {
                                 "BlockType": "text",
@@ -50,8 +52,6 @@
                     }
                 ]
             },            
-
-            //table
             {
                 "Name": "mainTable",
                 "BlockType": "table",

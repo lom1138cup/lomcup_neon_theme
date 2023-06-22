@@ -22,7 +22,19 @@
                             "BlockType": "text",
                             "Source": "{Season.LeagueInfo.LeagueName}",                            
                             "FontName": "{FontNameBlack}",
-                            "FontSize": 40
+                            "FontSize": 40,
+                            "Foreground": "{ForegroundDefault}",
+                            "Triggers": [
+                                {
+                                    "Condition": "{Season.LeagueCategory.ShortName, Converter=StringEquals, Parameter=T2}",
+                                    "Setters": [
+                                        {
+                                            "Property": "Foreground",
+                                            "Value": "{ForegroundT2}"
+                                        }
+                                    ]
+                                }
+                            ]
                         }]
                 },       
 
