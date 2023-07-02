@@ -175,27 +175,12 @@
                                                     //name
                                                     {
                                                         "BlockType": "text",
-                                                        "Source": "{Item.Driver.16}",
+                                                        "Source": "{Item.Driver.Name}",
                                                         "HorizontalAlignment": "Left",
                                                         "VerticalAlignment": "Center",
                                                         "FontName": "{FontNameBold}",
                                                         "Foreground": "{ForegroundAlt}",
                                                         "FontSize": 40
-                                                    },
-
-                                                    //icon badges
-                                                    {
-                                                        "BlockType": "itemstack",
-                                                        "Spacing": 4,
-                                                        "MarginTop": 4,
-                                                        "ItemStackOptions": {
-                                                            "ItemSource": "{Item.Driver.BadgeImages}",
-                                                            "Template": {
-                                                                "BlockType": "image",
-                                                                "Height": 24,
-                                                                "Source": "{Item}"
-                                                            }
-                                                        }
                                                     },
 
                                                     //text badge
