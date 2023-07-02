@@ -2,6 +2,7 @@
     "BlockRoot": {
         "Name": "mainStack",
         "BlockType": "stack",
+        "Margin": "0, 0, 0, 4",
 
         "Orientation": "Vertical",
         "Items": [
@@ -24,9 +25,20 @@
                                 "BlockType": "text",
                                 "Opacity": 100,
                                 "Source": "{Season.LeagueInfo.LeagueName}",
-                                "FontName": "{FontNameBold}",
+                                "FontName": "{FontNameWide}",
                                 "Foreground": "{ForegroundDefault}",
-                                "FontSize": 28
+                                "FontSize": 28,
+                                "Triggers":[
+                                    {
+                                        "Condition": "{IsTier2}",
+                                        "Setters": [
+                                            {
+                                                "Property": "Foreground",
+                                                "Value": "{ForegroundT2}"
+                                            }
+                                        ]
+                                            }
+                                        ]
                             },
                             {
                                 "BlockType": "text",
@@ -78,7 +90,7 @@
                                 "Setters": [
                                     {
                                         "Property": "MarginTop",
-                                        "Value": 0
+                                        "Value": 16
                                     }
                                 ]
                             }
@@ -120,41 +132,6 @@
                                 ]
                             },
 
-                            //car
-                            {
-                                "BlockType": "stack",
-                                "Width": 560,
-                                "Margin": "36, 0, 0, 12",
-                                "HorizontalAlignment": "Center",
-                                "VerticalAlignment": "Center",
-                                "Orientation": "Horizontal",
-                                "Spacing": 12,
-                                "RenderIf": "{Season.LineupsBasedType, Converter=StringEquals, Parameter=Cars}",
-                                "Items": [
-                                    //logo
-                                    {
-                                        "BlockType": "image",
-                                        "Height": 36,
-                                        "MarginRight": 0,
-                                        "VerticalAlignment": "Center",
-                                        "ImageOptions": {
-                                            "Path": "{Item.Car.Vendor.LogoPath}",
-                                            "VerticalAlignment": "Center"
-                                        }
-                                    },
-
-                                    //name
-                                    {
-                                        "BlockType": "text",
-                                        "HorizontalAlignment": "Center",
-                                        "VerticalAlignment": "Center",
-                                        "Source": "{Item.Car.Name}",
-                                        "Foreground":"{ForegroundAlt}",
-                                        "FontSize": 28
-                                    }
-                                ]
-                            },
-
                             //driver stack
                             {
                                 "BlockType": "stack",
@@ -164,7 +141,7 @@
                                     //driver 1
                                     {
                                         "BlockType": "dock",
-                                        "Width": "*",
+                                        "Width": 580,
                                         "Items": [
                                             {
                                                 "BlockType": "stack",
@@ -175,12 +152,28 @@
                                                     //name
                                                     {
                                                         "BlockType": "text",
+                                                        "MaxWidth": 520,
                                                         "Source": "{Item.Driver.Name}",
                                                         "HorizontalAlignment": "Left",
                                                         "VerticalAlignment": "Center",
                                                         "FontName": "{FontNameBold}",
-                                                        "Foreground": "{ForegroundAlt}",
-                                                        "FontSize": 40
+                                                        "FontSize": 40,
+                                                        "Foreground":"{ForegroundAlt}"
+                                                    },
+
+                                                    //icon badges
+                                                    {
+                                                        "BlockType": "itemstack",
+                                                        "Spacing": 4,
+                                                        "MarginTop": 4,
+                                                        "ItemStackOptions": {
+                                                            "ItemSource": "{Item.Driver.BadgeImages}",
+                                                            "Template": {
+                                                                "BlockType": "image",
+                                                                "Height": 24,
+                                                                "Source": "{Item}"
+                                                            }
+                                                        }
                                                     },
 
                                                     //text badge
@@ -202,16 +195,6 @@
                         ]
                     }
                 }
-            },
-            {
-                "BlockType": "text",
-                "Source": "Line-Up can change due to requests, inactivity or seats taken over from last season",
-                "HorizontalAlignment": "Center",
-                "MarginTop": 10,
-                "FontName": "{FontNameItalic}",
-                "FontSize": 20,
-                "Foreground": "{ForegroundDefault}",
-                "TextAlignment": "Center"
             }
         ]
     }
