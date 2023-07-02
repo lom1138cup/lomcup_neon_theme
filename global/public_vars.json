@@ -2,5 +2,6 @@
   "ShowPenaltyPointsInStandings": true,
   "ShowWinnerInCalendar": true,
   "ShowEventDescriptionInCalendar": true,
+  "IsTier2": true,
   "TimeZone": "GMT"
 }
