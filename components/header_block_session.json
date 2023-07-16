@@ -3,7 +3,6 @@
     "BlockType": "dock",
     "Orientation": "Horizontal",
     "Items": [
-        //headerLeft
         {
             "Name": "headerLeftPart",
             "BlockType": "stack",
@@ -11,20 +10,17 @@
             "Spacing": 12,
             "HorizontalAlignment": "Left",
             "Items": [
-
-                //league name
                 {
-                    "BlockType" : "stack",
-                    "VerticalAlignment" : "Center",
-                    "Items" :
-                    [
-                        {                            
+                    "BlockType": "stack",
+                    "VerticalAlignment": "Center",
+                    "Items": [
+                        {
                             "BlockType": "text",
-                            "Source": "{Season.LeagueInfo.LeagueName}",                            
+                            "Source": "{Season.LeagueInfo.LeagueName}",
                             "FontName": "{FontNameWide}",
                             "FontSize": 20,
-                            "Foreground":"{ForegroundDefault}",
-                            "Triggers":[
+                            "Foreground": "{ForegroundDefault}",
+                            "Triggers": [
                                 {
                                     "Condition": "{IsTier2}",
                                     "Setters": [
@@ -33,68 +29,60 @@
                                             "Value": "{ForegroundT2}"
                                         }
                                     ]
-                                        }
-                                    ]
                                 }
                             ]
-                        },
-                        {                            
-                            "BlockType": "text",
-                            "MarginLeft":5,
-                            "Source": "{Season.Name}",
-                            "VerticalAlignment" : "Center",
-                            "FontName": "{FontNameWide}",
-                            "FontSize": 20,
-                            "Foreground" : "{ForegroundAlt}"
                         }
                     ]
-                },                
-
-                //session
+                },
                 {
-                    "Name": "headerSessionLine",
-                    "BlockType": "stack",
+                    "BlockType": "text",
+                    "MarginLeft": 5,
+                    "Source": "{Season.Name}",
                     "VerticalAlignment": "Center",
-                    "Spacing": 8,
-                    "Items": [
-                        {
-                            "Name": "CountryFlag",
-                            "BlockType": "image",
-                            "VerticalAlignment": "Center",
-                            "Height": 48,
-                            "Source": "{Session.Track.Nation.LogoPath}"
-                        },
-
-                        {
-                            "Name": "CountryName",
-                            "BlockType": "text",
-                            "MarginLeft": 12,
-                            "VerticalAlignment": "Center",
-                            "Source": "{Session.Track.CountryName}",
-                            "FontName": "{FontNameWide}",
-                            "FontSize": 28
-                        },
-
-                        {
-                            "Name": "LocationName",
-                            "BlockType": "text",
-                            "MarginLeft": 2,
-                            "VerticalAlignment": "Center",
-                            "Source": "{Session.Track.CircuitName}",
-                            "FontName": "{FontNameWide}",                            
-                            "FontSize": 28,
-                            "Foreground" : "{ForegroundAlt}"
-                        }
-                    ]
+                    "FontName": "{FontNameWide}",
+                    "FontSize": 20,
+                    "Foreground": "{ForegroundAlt}"
                 }
             ]
         },
-
-        //headerRight
+        {
+            "Name": "headerSessionLine",
+            "BlockType": "stack",
+            "VerticalAlignment": "Center",
+            "Spacing": 8,
+            "Items": [
+                {
+                    "Name": "CountryFlag",
+                    "BlockType": "image",
+                    "VerticalAlignment": "Center",
+                    "Height": 48,
+                    "Source": "{Session.Track.Nation.LogoPath}"
+                },
+                {
+                    "Name": "CountryName",
+                    "BlockType": "text",
+                    "MarginLeft": 12,
+                    "VerticalAlignment": "Center",
+                    "Source": "{Session.Track.CountryName}",
+                    "FontName": "{FontNameWide}",
+                    "FontSize": 28
+                },
+                {
+                    "Name": "LocationName",
+                    "BlockType": "text",
+                    "MarginLeft": 2,
+                    "VerticalAlignment": "Center",
+                    "Source": "{Session.Track.CircuitName}",
+                    "FontName": "{FontNameWide}",
+                    "FontSize": 28,
+                    "Foreground": "{ForegroundAlt}"
+                }
+            ]
+        },
         {
             "Name": "headerRightPart",
             "BlockType": "stack",
-            "MarginLeft" : 56,
+            "MarginLeft": 56,
             "Orientation": "Vertical",
             "HorizontalAlignment": "Right",
             "Items": [
@@ -114,7 +102,6 @@
                                     "FontSize": 18,
                                     "Foreground": "{ForegroundDarker}"
                                 },
-
                                 {
                                     "BlockType": "stack",
                                     "HorizontalAlignment": "Right",
@@ -125,45 +112,40 @@
                                             "FontName": "{FontNameWide}",
                                             "FontSize": 18
                                         },
-                                        //race duration
                                         {
-                                            "BlockType": "text",                                            
+                                            "BlockType": "text",
                                             "RenderIf": false,
                                             "MarginLeft": 5,
                                             "Source": "{Session.TotalLaps} [laps]",
                                             "FontName": "{FontNameWide}",
                                             "FontSize": 18,
-                                            "Triggers" : 
-                                            [
+                                            "Triggers": [
                                                 {
-                                                    "Condition" : "{Session.IsLiveData}",
-                                                    "ConditionAnd" : "{Session.SessionType, Converter=StringEquals, Parameter=Race}",
-                                                    "Property" : "RenderIf",
-                                                    "Value" : true
+                                                    "Condition": "{Session.IsLiveData}",
+                                                    "ConditionAnd": "{Session.SessionType, Converter=StringEquals, Parameter=Race}",
+                                                    "Property": "RenderIf",
+                                                    "Value": true
                                                 }
                                             ]
                                         },
-                                        //qual, practice duration
                                         {
-                                            "BlockType": "text",                                                                                  
+                                            "BlockType": "text",
                                             "RenderIf": false,
                                             "MarginLeft": 5,
                                             "Source": "{Session.SessionDurationMinutes} [min].",
                                             "FontName": "{FontNameWide}",
                                             "FontSize": 18,
-                                            "Triggers" : 
-                                            [
+                                            "Triggers": [
                                                 {
-                                                    "Condition" : "{Session.IsLiveData}",
-                                                    "ConditionAnd" : "{Session.SessionType, Converter=StringNotEquals, Parameter=Race}",
-                                                    "Property" : "RenderIf",
-                                                    "Value" : true
+                                                    "Condition": "{Session.IsLiveData}",
+                                                    "ConditionAnd": "{Session.SessionType, Converter=StringNotEquals, Parameter=Race}",
+                                                    "Property": "RenderIf",
+                                                    "Value": true
                                                 }
                                             ]
                                         }
                                     ]
                                 },
-
                                 {
                                     "BlockType": "stack",
                                     "RenderIf": "{Session.IsLiveData}",
@@ -187,7 +169,6 @@
                                 }
                             ]
                         },
-
                         {
                             "Name": "leagueLogo",
                             "BlockType": "image",
