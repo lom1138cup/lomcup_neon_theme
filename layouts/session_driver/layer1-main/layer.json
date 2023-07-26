@@ -66,39 +66,64 @@
           }
         ]
       },
-
+      {
+        "Name" : "separator",
+        "BlockType": "image",
+        "MarginTop": 16,
+        "MarginLeft": 4,
+        "MarginRight": 4,
+        "MarginBottom": 24,
+        "Width": "*",
+        "Source": "separator.png"
+      },
       {
         "BlockType": "stack",
-        "Orientation": "Horizontal",
+        "Orientation": "Vertical",
         "Items": [
           //position
           {
             "BlockType": "text",
             "FontSize": 56,
-            "Foreground": "#444444",
-            "Source": "P"
+            "MarginTop": 24,
+            "Foreground":"{ForegroundDefault}",
+            "VerticalAlignment": "Bottom",
+            "Source": "Position"
+          },
+          {
+            "BlockType": "text",
+            "Foreground": "{ForegroundAlt}",
+            "FontSize": 56,
+            "Source": "P{DriverInfo.Driver.PositionString}"
           },
           {
             "BlockType": "text",
             "FontSize": 56,
-            "Source": "{DriverInfo.Driver.PositionString}"
+            "MarginTop": 24,
+            "Foreground":"{ForegroundDefault}",
+            "VerticalAlignment": "Bottom",
+            "Source": "Gap Ahead"
           },
-
           {
             "BlockType": "text",
             "FontSize": 56,
-            "MarginLeft": 24,
-            "Foreground": "#444444",
+            "Foreground": "{ForegroundAlt}",
             "VerticalAlignment": "Bottom",
             "Source": "{DriverInfo.Driver.IntervalRace}"
           },
 
           //stints
           {
+            "BlockType": "text",
+            "FontSize": 56,
+            "MarginTop": 24,
+            "Foreground":"{ForegroundDefault}",
+            "VerticalAlignment": "Bottom",
+            "Source": "Strategy"
+          },
+          {
             "BlockType": "itemstack",
             "Spacing": 4,
-            "Margin": "24,0,0,0",
-            "Padding": "12, 0",
+            "MarginLeft": -5,
             "VerticalAlignment": "Center",
             "Background": "{BackgroundDefault}",
             "ItemStackOptions": {
@@ -111,13 +136,14 @@
                 "Items": [
                   {
                     "BlockType": "image",
-                    "Height": 48,
+                    "Height": 60,
                     "VerticalAlignment": "Center",
                     "Source": "tyres_{Item.Tyres}.png"
                   },
                   {
                     "BlockType": "text",
                     "Source": "{Item.Laps}",
+                    "Foreground": "{ForegroundAlt}",
                     "HorizontalAlignment": "Center",
                     "VerticalAlignment": "Center",
                     "TextOptions": {

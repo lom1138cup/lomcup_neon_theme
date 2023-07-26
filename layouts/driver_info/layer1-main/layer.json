@@ -4,7 +4,7 @@
         "Name": "mainStack",
         "BlockType": "stack",
         "MarginLeft":20,
-        "MarginRight":20,
+        "MarginLeft":20,
         "MarginBottom":20,
         "MarginTop":20,
         "Background": "{BackgroundAlt}",
@@ -32,7 +32,7 @@
                     {
                         "BlockType": "image",
                         "Height": 80,
-                        "MarginRight": 20,
+                        "MarginLeft": 20,
                         "MarginLeft": 20,
                         "VerticalAlignment": "Center",
                         "ImageOptions": {
@@ -44,10 +44,10 @@
             },
             {
                 "BlockType": "stack",
-                "HorizontalAlignment": "Left",
+                "HorizontalAlignment": "Center",
+                "Orientation": "Vertical",
                 "VerticalAlignment": "Center",
                 "MarginLeft":20,
-                "MarginRight":20,
                 "Width": "*",
                 "Items": [
                     //Win Count
@@ -55,9 +55,8 @@
                         "BlockType": "text",
                         "Foreground": "{ForegroundAlt}",
                         "MaxWidth": 600,
-                        "MarginLeft": 20,
                         "Source": "Wins: {DriverInfo.DriverSeason.CountP1}",
-                        "HorizontalAlignment": "Right",
+                        "HorizontalAlignment": "Left",
                         "VerticalAlignment": "Center",
                         "FontName": "{FontNameDefault}",
                         "FontSize": 56
@@ -67,32 +66,19 @@
                     {
                         "BlockType": "text",
                         "MaxWidth": 600,
-                        "Source": " | Races: {DriverInfo.DriverSeason.RacesCount}",
+                        "Source": "Races: {DriverInfo.DriverSeason.RacesCount}",
                         "Foreground": "{ForegroundAlt}",
-                        "HorizontalAlignment": "Right",
-                        "VerticalAlignment": "Center",
+                        "HorizontalAlignment": "Left",
                         "FontName": "{FontNameDefault}",
                         "FontSize": 56
-                    }
-                ]
-            },
-            {
-                "BlockType": "stack",
-                "HorizontalAlignment": "Left",
-                "VerticalAlignment": "Center",
-                "MarginLeft":20,
-                "MarginRight":20,
-                "Width": "*",
-                "Items": [
+                    },
                     //Win Count
                     {
                         "BlockType": "text",
                         "Foreground": "{ForegroundAlt}",
                         "MaxWidth": 600,
-                        "MarginLeft": 20,
                         "Source": "WDC Pos.: {DriverInfo.DriverSeason.Position}",
-                        "HorizontalAlignment": "Center",
-                        "VerticalAlignment": "Center",
+                        "HorizontalAlignment": "Left",
                         "FontName": "{FontNameDefault}",
                         "FontSize": 56
                     },
@@ -100,12 +86,12 @@
                     //season points
                     {
                         "BlockType": "text",
-                        "Source": " | WDC Points: {DriverInfo.DriverSeason.Points}",
+                        "Source": "WDC Points: {DriverInfo.DriverSeason.Points}",
                         "Foreground": "{ForegroundAlt}",
-                        "HorizontalAlignment": "Center",
-                        "VerticalAlignment": "Center",
+                        "HorizontalAlignment": "Left",
                         "FontName": "{FontNameDefault}",
-                        "FontSize": 56
+                        "FontSize": 56,
+                        "Width": "600"
                     }
                 ]
             }           
