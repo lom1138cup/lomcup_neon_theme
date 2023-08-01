@@ -1,0 +1,116 @@
+{
+    "BlockRoot": {
+        "Name": "mainStack",
+        "BlockType": "stack",
+        "Margin": "{MarginRoot}",       
+        "Orientation": "Vertical",
+        "Items": [
+            {
+                "BlockType" : "component",
+                "ComponentName" : "header_block_session"
+            },
+            {
+                "Name" : "separator",
+                "BlockType": "image",
+                "MarginTop": 0,
+                "MarginLeft": 0,
+                "MarginRight": 0,
+                "MarginBottom": 5,
+                "Width": "*",
+                "Source": "images/separator.png"
+            },
+            {
+                "BlockType": "stack",
+                "Orientation" : "Horizontal",
+                "Items" : [
+                    {
+                        "BlockType" : "stack",
+                        "Orientation" : "Vertical",
+                        "Items" : [
+                            {
+                                "Name": "mainTable",
+                                "BlockType": "table",
+                                "Margin" : "{MarginTable}",
+                                "MarginRight" : 150,
+                                "Padding" : "45,0,45,20",
+                                "TableOptions": {
+                                    "ItemsSource": "{Session.Drivers}",
+                                    "RowSpacing": 13,
+                                    "ColSpacing": 0,
+                                    "HeaderTemplate": {
+                                        "BlockType": "text",
+                                        "MarginBottom": 8,
+                                        "TextOptionsExtern" : "tableColumnHeader"
+                                    },
+                                    "Columns": [
+                                        {
+                                            "Header": "",
+                                            "WidthStretch" : true,
+                                            "Template":
+                                            {
+                                                "BlockType" : "component",
+                                                "ComponentName" : "driver_line_stints"                        
+                                            }
+                                        },
+                                        {
+                                            "Header": "",
+                                            "Template":
+                                            {
+                                                "BlockType" : "stack",
+                                                "Orientation" : "Horizontal",
+                                                "Width" : 2000,
+                                                
+                                                "PaddingTop" : 10,
+                                                "Items" : [
+                                                    {
+                                                        "BlockType": "itemstack",
+                                                        "Spacing": 0,
+                                                        "Height" : 73,
+                                                        "MaxWidth" : "{Item.RaceDistancePercentage, Converter=NumberMultiply, Parameter=20}",
+                                                        "ItemStackOptions": {
+                                                            "ItemSource": "{Item.Stints}",
+                                                            "Template": {
+                                                                "BlockType" : "component",
+                                                                "ComponentOptions" : {
+                                                                    "ComponentName" : "stints_bar"
+                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "BlockType": "stack",
+                                                        "Spacing": 0,
+                                                        "Height" : 73,
+                                                        "RenderIf" : "{Item.IsFinished, Converter=BoolReverse}",
+                                                        "Items": [
+                                                            {
+                                                                "BlockType" : "text",
+                                                                "Source" : "  {Item.PositionIncludeStatus}",
+                                                                "RenderIf" : false,
+                                                                "FontSize" : 30,
+                                                                "PaddingBottom" : 5,
+                                                                "VerticalAlignment" : "Bottom",
+                                                                "Triggers" : [
+                                                                    {
+                                                                        "Condition" : "{Item.PositionIncludeStatus, Converter=StringEquals, Parameter=DNF}",
+                                                                        "ConditionOr" : "{Item.PositionIncludeStatus, Converter=StringEquals, Parameter=DSQ}",
+                                                                        "Property" : "RenderIf",
+                                                                        "Value" : true
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
