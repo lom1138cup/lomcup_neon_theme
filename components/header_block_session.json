@@ -17,8 +17,8 @@
                         {
                             "BlockType": "text",
                             "Source": "{Season.LeagueInfo.LeagueName}",
-                            "FontName": "{FontNameWide}",
-                            "FontSize": 20,
+                            "FontName": "{FontNameBlack}",
+                            "FontSize": 40,
                             "Foreground": "{ForegroundDefault}",
                             "Triggers": [
                                 {
@@ -40,7 +40,7 @@
                     "Source": "{Season.Name}",
                     "VerticalAlignment": "Center",
                     "FontName": "{FontNameWide}",
-                    "FontSize": 20,
+                    "FontSize": 40,
                     "Foreground": "{ForegroundAlt}"
                 }
             ]
@@ -48,7 +48,7 @@
         {
             "Name": "headerSessionLine",
             "BlockType": "stack",
-            "VerticalAlignment": "Center",
+            "VerticalAlignment": "Bottom",
             "Spacing": 8,
             "Items": [
                 {
@@ -65,7 +65,18 @@
                     "VerticalAlignment": "Center",
                     "Source": "{Session.Track.CountryName}",
                     "FontName": "{FontNameWide}",
-                    "FontSize": 28
+                    "FontSize": 34,
+                    "Triggers": [
+                        {
+                            "Condition": "{IsTier2}",
+                            "Setters": [
+                                {
+                                    "Property": "Foreground",
+                                    "Value": "{ForegroundT2}"
+                                }
+                            ]
+                        }
+                    ],
                 },
                 {
                     "Name": "LocationName",
@@ -99,8 +110,8 @@
                                     "HorizontalAlignment": "Right",
                                     "Source": "[Round] {Event.Position} [of] {Season.SeasonOverallNumberEvents}",
                                     "FontName": "{FontNameWide}",
-                                    "FontSize": 18,
-                                    "Foreground": "{ForegroundDarker}"
+                                    "FontSize": 23,
+                                    "Foreground": "{ForegroundAlt}"
                                 },
                                 {
                                     "BlockType": "stack",
@@ -110,7 +121,18 @@
                                             "BlockType": "text",
                                             "Source": "[{Session.SessionType}]:",
                                             "FontName": "{FontNameWide}",
-                                            "FontSize": 18
+                                            "FontSize": 18,
+                                            "Triggers": [
+                                                {
+                                                    "Condition": "{IsTier2}",
+                                                    "Setters": [
+                                                        {
+                                                            "Property": "Foreground",
+                                                            "Value": "{ForegroundAlt}"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
                                         },
                                         {
                                             "BlockType": "text",
@@ -173,7 +195,7 @@
                             "Name": "leagueLogo",
                             "BlockType": "image",
                             "Height": 100,
-                            "MarginLeft": 36,
+                            "MarginLeft": 10,
                             "Source": "{Season.LeagueInfo.LeagueLogo}"
                         }
                     ]

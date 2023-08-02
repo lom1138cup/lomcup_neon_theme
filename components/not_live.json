@@ -1,0 +1,10 @@
+{
+    "BlockType": "text",
+    "MarginLeft": 80,
+    "Source": "STINTS MISSING/SESSION HASN'T BEEN TIMED LIVE",
+    "Foreground": "{Foreground}",
+    "HorizontalAlignment": "Center",
+    "VerticalAlignment": "Center",
+    "FontName": "{FontNameBlack}",
+    "FontSize": 100
+}

@@ -15,118 +15,68 @@
                 {
                     "BlockType" : "shape",
                     "Height" : "{StintsBarHeight}",
-                    "VerticalAlignment" : "Bottom",
-                    "PositionY" : "{StintsBarPositionY}",
+                    "VerticalAlignment" : "Center",
+                    "PositionY" : 12,
                     "Width" : "{Item.Percentage, Converter=NumberMultiply, Parameter=19}",
                     "ShapeOptions" : {
                         "ShapeType" : "rectangle",
                         "Fill" : "#ff001e"
                     },
-                    "RenderIf" : "{Item.Tyres, Converter=StringEquals, Parameter=soft}",
-                    "Triggers" : [
-                       {
-                           "Condition" : "{Item.StartLapNumber, Converter=NumberEquals, Parameter=1}",
-                           "Setters" : [
-                               {
-                                   "Property" : "PositionY",
-                                   "Value" : "12"
-                               }
-                           ]
-                       }
-                    ]
+                    "RenderIf" : "{Item.Tyres, Converter=StringEquals, Parameter=soft}"
                 },
+
                 {
                     "BlockType" : "shape",
                     "Height" : "{StintsBarHeight}",
                     "VerticalAlignment" : "Bottom",
-                    "PositionY" : "{StintsBarPositionY}",
+                    "PositionY" : 12,
                     "Width" : "{Item.Percentage, Converter=NumberMultiply, Parameter=19}",
                     "ShapeOptions" : {
                         "ShapeType" : "rectangle",
                         "Fill" : "#fffb00"
                     },
-                    "RenderIf" : "{Item.Tyres, Converter=StringEquals, Parameter=medium}",
-                    "Triggers" : [
-                       {
-                           "Condition" : "{Item.StartLapNumber, Converter=NumberEquals, Parameter=1}",
-                           "Setters" : [
-                               {
-                                   "Property" : "PositionY",
-                                   "Value" : "12"
-                               }
-                           ]
-                       }
-                    ]
+                    "RenderIf" : "{Item.Tyres, Converter=StringEquals, Parameter=medium}"
                 },
+
                 {
                     "BlockType" : "shape",
                     "Height" : "{StintsBarHeight}",
                     "VerticalAlignment" : "Bottom",
-                    "PositionY" : "{StintsBarPositionY}",
+                    "PositionY" : 12,
                     "Width" : "{Item.Percentage, Converter=NumberMultiply, Parameter=19}",
                     "ShapeOptions" : {
                         "ShapeType" : "rectangle",
                         "Fill" : "#ffffff"
                     },
-                    "RenderIf" : "{Item.Tyres, Converter=StringEquals, Parameter=hard}",
-                    "Triggers" : [
-                       {
-                           "Condition" : "{Item.StartLapNumber, Converter=NumberEquals, Parameter=1}",
-                           "Setters" : [
-                               {
-                                   "Property" : "PositionY",
-                                   "Value" : "12"
-                               }
-                           ]
-                       }
-                    ]
+                    "RenderIf" : "{Item.Tyres, Converter=StringEquals, Parameter=hard}"
                 },
+
                 {
                     "BlockType" : "shape",
                     "Height" : "{StintsBarHeight}",
                     "VerticalAlignment" : "Bottom",
-                    "PositionY" : "{StintsBarPositionY}",
+                    "PositionY" : "12",
                     "Width" : "{Item.Percentage, Converter=NumberMultiply, Parameter=19}",
                     "ShapeOptions" : {
                         "ShapeType" : "rectangle",
                         "Fill" : "#19c702"
                     },
-                    "RenderIf" : "{Item.Tyres, Converter=StringEquals, Parameter=intermediate}",
-                    "Triggers" : [
-                       {
-                           "Condition" : "{Item.StartLapNumber, Converter=NumberEquals, Parameter=1}",
-                           "Setters" : [
-                               {
-                                   "Property" : "PositionY",
-                                   "Value" : "12"
-                               }
-                           ]
-                       }
-                    ]
+                    "RenderIf" : "{Item.Tyres, Converter=StringEquals, Parameter=intermediate}"
                 },
+
                 {
                     "BlockType" : "shape",
                     "Height" : "{StintsBarHeight}",
                     "VerticalAlignment" : "Bottom",
-                    "PositionY" : "{StintsBarPositionY}",
+                    "PositionY" : "12",
                     "Width" : "{Item.Percentage, Converter=NumberMultiply, Parameter=19}",
                     "ShapeOptions" : {
                         "ShapeType" : "rectangle",
                         "Fill" : "#024dc7"
                     },
-                    "RenderIf" : "{Item.Tyres, Converter=StringEquals, Parameter=wet}",
-                    "Triggers" : [
-                       {
-                           "Condition" : "{Item.StartLapNumber, Converter=NumberEquals, Parameter=1}",
-                           "Setters" : [
-                               {
-                                   "Property" : "PositionY",
-                                   "Value" : "28"
-                               }
-                           ]
-                       }
-                    ]
+                    "RenderIf" : "{Item.Tyres, Converter=StringEquals, Parameter=wet}"
                 },
+
                 {
                     "BlockType" : "stack",
                     "Height" : 73,
@@ -137,11 +87,11 @@
                             "BlockType" : "text",
                             "Source" : "{Item.StartLapNumber}",
                             "HorizontalAlignment" : "Center",
-                            "Foreground" : "#ffffff",
+                            "Foreground" : "#000000",
+                            "MarginLeft": 3,
                             "FontName" : "{FontNameBold}",
                             "FontSize" : 25,
                             "PaddingBottom" : "{StintsBarHeight}",
-                            "Height" : 25,
                             "Triggers" : [
                                 {
                                     "Condition" : "{Item.StartLapNumber, Converter=NumberEquals, Parameter=1}",
@@ -155,39 +105,9 @@
                             ]
                             
                             
-                        },
-                        {
-                            "BlockType" : "image",
-                            "VerticalAlignment" : "Bottom",
-                            "Foreground" : "#000000",
-                            "Source" : "images/tyres/tyres_{Item.Tyres}.png",
-                            "RenderIf" : true,
-                            "Height" : 37,
-                            "PaddingBottom" : "25"
                         }
                     ],
                     
-                },
-                {
-                   "BlockType" : "text",
-                   "Source" : "{Item.StartLapNumber}",
-                   "HorizontalAlignment" : "Center",
-                   "Foreground" : "#ffffff",
-                   "FontName" : "{FontNameBold}",
-                   "FontSize" : 25,
-                   "PositionX" : 0,
-                   "Height" : 73,
-                   "Triggers" : [
-                       {
-                           "Condition" : "{Item.StartLapNumber, Converter=NumberEquals, Parameter=1}",
-                           "Setters" : [
-                               {
-                                   "Property" : "Source",
-                                   "Value" : " "
-                               }
-                           ]
-                       }
-                   ]
                 },
                 {
                    "BlockType" : "stack",
@@ -196,12 +116,12 @@
                        
                        {
                            "BlockType" : "image",
-                           "VerticalAlignment" : "Center",
-                           "Foreground" : "#000000",
-                           "Source" : "images/pit/pit_{Item.Tyres}.png",
+                           "VerticalAlignment" : "Bottom",
+                           "MarginLeft": 15,
+                           "Source" : "images/tyres/tyres_{Item.Tyres}.png",
                            "RenderIf" : true,
-                           "Height" : 60,
-                           "Width" : 60,
+                           "Height" : 55,
+                           "Width" : 55,
                            "Triggers" : [
                                {
                                    "Condition" : "{Item.StartLapNumber, Converter=NumberEquals, Parameter=1}",

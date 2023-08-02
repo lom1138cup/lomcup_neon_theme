@@ -49,7 +49,7 @@
                                             "Template":
                                             {
                                                 "BlockType" : "component",
-                                                "ComponentName" : "driver_line_stints"                        
+                                                "ComponentName" : "driver_line_stints"                       
                                             }
                                         },
                                         {
@@ -59,12 +59,9 @@
                                                 "BlockType" : "stack",
                                                 "Orientation" : "Horizontal",
                                                 "Width" : 2000,
-                                                
-                                                "PaddingTop" : 10,
                                                 "Items" : [
                                                     {
                                                         "BlockType": "itemstack",
-                                                        "Spacing": 0,
                                                         "Height" : 73,
                                                         "MaxWidth" : "{Item.RaceDistancePercentage, Converter=NumberMultiply, Parameter=20}",
                                                         "ItemStackOptions": {
@@ -73,23 +70,28 @@
                                                                 "BlockType" : "component",
                                                                 "ComponentOptions" : {
                                                                     "ComponentName" : "stints_bar"
-                                                                }
+                                                                },
+                                                                "Triggers":[
+                                                                    {
+                                                                        "Condition": "{Session.IsLiveData, Converter=BoolReverse}",
+                                                                        "Property": "ComponentName",
+                                                                        "Value": "not_live"
+                                                                    }
+                                                                ]
                                                             }
                                                         }
                                                     },
                                                     {
                                                         "BlockType": "stack",
-                                                        "Spacing": 0,
-                                                        "Height" : 73,
+                                                        "Height" : 70,
                                                         "RenderIf" : "{Item.IsFinished, Converter=BoolReverse}",
                                                         "Items": [
                                                             {
                                                                 "BlockType" : "text",
                                                                 "Source" : "  {Item.PositionIncludeStatus}",
                                                                 "RenderIf" : false,
-                                                                "FontSize" : 30,
-                                                                "PaddingBottom" : 5,
-                                                                "VerticalAlignment" : "Bottom",
+                                                                "FontSize" : 35,
+                                                                "VerticalAlignment" : "Center",
                                                                 "Triggers" : [
                                                                     {
                                                                         "Condition" : "{Item.PositionIncludeStatus, Converter=StringEquals, Parameter=DNF}",
