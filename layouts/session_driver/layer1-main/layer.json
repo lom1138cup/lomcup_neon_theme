@@ -101,7 +101,14 @@
             "MarginTop": 24,
             "Foreground":"{ForegroundDefault}",
             "VerticalAlignment": "Bottom",
-            "Source": "Gap Ahead"
+            "Source": "Gap to Leader",
+            "Triggers": [
+              {
+                "Condition": "{DriverInfo.Driver.PositionString, Converter=StringEquals, Parameter=1}",
+                  "Property": "Source",
+                  "Value": "Time"
+              }
+            ]
           },
           {
             "BlockType": "text",
