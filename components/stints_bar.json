@@ -117,7 +117,7 @@
                        {
                            "BlockType" : "image",
                            "VerticalAlignment" : "Bottom",
-                           "MarginLeft": 15,
+                           "MarginLeft": 30,
                            "Source" : "images/tyres/tyres_{Item.Tyres}.png",
                            "RenderIf" : true,
                            "Height" : 55,
