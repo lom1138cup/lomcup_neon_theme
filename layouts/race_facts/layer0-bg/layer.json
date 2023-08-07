@@ -1,0 +1,7 @@
+{
+    "BlockRoot": {
+        "Name": "bg",
+        "BlockType": "image", 
+        "Source": "images/bg.png"
+    }
+    }

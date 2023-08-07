@@ -1,0 +1,35 @@
+{
+    "BlockRoot": {
+        "BlockType": "stack",
+        "Orientation": "Vertical",
+        "Margin": "{MarginRoot}",
+        "Items": [
+            {
+                "BlockType" : "component",
+                "ComponentName" : "header_block_session"
+            },
+            {
+                "Name" : "separator",
+                "BlockType": "image",
+                "MarginTop": 10,
+                "MarginLeft": 0,
+                "MarginRight": 0,
+                "MarginBottom": 10,
+                "Width": "*",
+                "Source": "images/separator.png"
+            },
+            {
+                "BlockType": "component",
+                "Name": "FactStack",
+                "ComponentName": "racefacts",
+                "RenderIf": "{Session.IsLiveData}"
+            },
+            {
+                "BlockType": "component",
+                "Name": "FactStack",
+                "ComponentName": "not_live",
+                "RenderIf": "{Session.IsLiveData, Converter=BoolReverse}"
+            }
+        ]
+    }
+}
