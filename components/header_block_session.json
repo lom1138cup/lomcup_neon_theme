@@ -128,11 +128,11 @@
                                                     "Setters": [
                                                         {
                                                             "Property": "Foreground",
-                                                            "Value": "{ForegroundAlt}"
+                                                            "Value": "{ForegroundT2}"
                                                         }
                                                     ]
                                                 }
-                                            ],
+                                            ]
                                         },
                                         {
                                             "BlockType": "text",
@@ -147,6 +147,15 @@
                                                     "ConditionAnd": "{Session.SessionType, Converter=StringEquals, Parameter=Race}",
                                                     "Property": "RenderIf",
                                                     "Value": true
+                                                },
+                                                {
+                                                    "Condition": "{IsTier2}",
+                                                    "Setters": [
+                                                        {
+                                                            "Property": "Foreground",
+                                                            "Value": "{ForegroundT2}"
+                                                        }
+                                                    ]
                                                 }
                                             ]
                                         },
@@ -163,6 +172,15 @@
                                                     "ConditionAnd": "{Session.SessionType, Converter=StringNotEquals, Parameter=Race}",
                                                     "Property": "RenderIf",
                                                     "Value": true
+                                                },
+                                                {
+                                                    "Condition": "{IsTier2}",
+                                                    "Setters": [
+                                                        {
+                                                            "Property": "Foreground",
+                                                            "Value": "{ForegroundT2}"
+                                                        }
+                                                    ]
                                                 }
                                             ]
                                         }
@@ -185,7 +203,18 @@
                                             "VerticalAlignment": "Center",
                                             "Source": "{Session.AirTemperatureString}",
                                             "FontName": "{FontNameWide}",
-                                            "FontSize": 15
+                                            "FontSize": 15,
+                                            "Triggers": [
+                                                {
+                                                    "Condition": "{IsTier2}",
+                                                    "Setters": [
+                                                        {
+                                                            "Property": "Foreground",
+                                                            "Value": "{ForegroundT2}"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
                                         }
                                     ]
                                 }
