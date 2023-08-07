@@ -1,0 +1,141 @@
+{
+    "BlockType": "stack",
+    "Orientation": "Vertical",
+    "Spacing": 30,
+    "Items": [
+        //Fact 1
+        {
+            "BlockType": "stack",
+            "Orientation": "Vertical",
+            "Items": [
+        {
+            "BlockType": "text",
+            "Source": "[ATTENDANCE]",
+            "FontSize": 50,
+            "FontName": "{FontNameBlack}"
+        },
+        {
+            "BlockType": "text",
+            "Source": "{Session.Drivers.Count} ({Session.Drivers.Count, Converter=PercentOf, Parameter=20}%)",
+            "FontSize": 30,
+            "Foreground": "{ForegroundAlt}"
+        }]},
+        //Fact 2
+        {
+            "BlockType": "stack",
+            "Orientation": "Vertical",
+            "Items": [
+        {
+            "BlockType": "text",
+            "Source": "[FASTEST LAP]",
+            "FontSize": 50,
+            "FontName": "{FontNameBlack}"
+        },
+        {
+            "BlockType": "text",
+            "Source": "{Session.FastestLapTime} (Lap {Session.FastestLapNumLap} by {Session.FastestLapDriver.Name})",
+            "FontSize": 30,
+            "Foreground": "{ForegroundAlt}"
+        }]},
+        //Fact 3
+        {
+            "BlockType": "stack",
+            "Orientation": "Vertical",
+            "Items": [
+        {
+            "BlockType": "text",
+            "Source": "[LAP COUNT]",
+            "FontSize": 50,
+            "FontName": "{FontNameBlack}"
+        },
+        {
+            "BlockType": "text",
+            "Source": "{Session.TotalLaps} ",
+            "FontSize": 30,
+            "Foreground": "{ForegroundAlt}"
+        }]},
+        //Fact 3
+        {
+            "BlockType": "stack",
+            "Orientation": "Vertical",
+            "Items": [
+        {
+            "BlockType": "text",
+            "Source": "[START DATE AND TIME]",
+            "FontSize": 50,
+            "FontName": "{FontNameBlack}"
+        },
+        {
+            "BlockType": "text",
+            "Source": "{Session.LiveEndDateGmt} ",
+            "FontSize": 30,
+            "Foreground": "{ForegroundAlt}"
+        }]},
+        //Fact 4
+        {
+            "BlockType": "stack",
+            "Orientation": "Vertical",
+            "Items": [
+        {
+            "BlockType": "text",
+            "Source": "[WEATHER]",
+            "FontSize": 50,
+            "FontName": "{FontNameBlack}"
+        },
+        {
+            "BlockType": "stack",
+            "Orientation": "Horizontal",
+            "Items": [
+                {
+                    "BlockType": "image",
+                    "Height": 32,
+                    "MarginRight": 10,
+                    "VerticalAlignment": "Center",
+                    "Source": "weather_{Session.WeatherType}.png"
+                },
+                {
+                    "BlockType": "text",
+                    "Source": "{Session.WeatherType} ",
+                    "FontSize": 30,
+                    "Foreground": "{ForegroundAlt}"
+                }
+            ]
+        },
+        {
+            "BlockType": "text",
+            "Source": "{Session.AirTemperature}°C (Air)",
+            "FontSize": 30,
+            "Foreground": "{ForegroundAlt}"
+        },
+        {
+            "BlockType": "text",
+            "Source": "{Session.TrackTemperature}°C (Track)",
+            "FontSize": 30,
+            "Foreground": "{ForegroundAlt}"
+        }]},
+        //Fact 5
+        {
+            "BlockType": "stack",
+            "Orientation": "Vertical",
+            "Items": [
+        {
+            "BlockType": "text",
+            "Source": "[SC Count]",
+            "FontSize": 50,
+            "FontName": "{FontNameBlack}"
+        },
+        {
+            "BlockType": "text",
+            "Source": "{Session.SafetyCarCount} Safety Cars and {Session.VirtualSafetyCarCount} Virtual Safety Cars ",
+            "FontSize": 30,
+            "Foreground": "{ForegroundAlt}",
+            "Triggers": [
+                {
+                    "Condition": "{Session.SafetyCarCount, Converter=StringEquals, Parameter=1}",
+                    "Property": "Source",
+                    "Value": "{Session.SafetyCarCount} Safety Car and {Session.VirtualSafetyCarCount} Virtual Safety Cars "
+                }
+            ]
+        }]}
+    ]
+}
