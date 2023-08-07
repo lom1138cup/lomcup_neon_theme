@@ -112,6 +112,12 @@
                         ]
                     }
                 ]
+            },
+            {
+                "BlockType": "text",
+                "Source": "Layout by @Kaac_",
+                "HorizontalAlignment": "Right",
+                "FontSize": 30
             }
         ]
     }

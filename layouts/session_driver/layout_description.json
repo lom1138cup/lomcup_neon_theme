@@ -1,6 +1,6 @@
 {
-    "LayoutName": "RaceStints",
-    "RenderType": "RaceResults",
-    "RenderCaption": "Stints",
-    "Index" : 1
+    "LayoutName": "DriverSession",
+    "RenderType": "DriverSession",
+	"RenderCaption": "",
+    "Index" : 0	
 }
