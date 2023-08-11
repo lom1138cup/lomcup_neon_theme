@@ -266,7 +266,7 @@
                             "ComponentName" : "sticker",
                             "Vars" :
                             {
-                                "bg" : "#6e009a",
+                                "bg" : "#f46fff",
                                 "header" : "FASTEST LAP",
                                 "main" : "{Session.FastestLapDriver.Name}",
                                 "data" : "{Session.FastestLapTime}"
