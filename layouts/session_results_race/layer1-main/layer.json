@@ -267,7 +267,7 @@
                             "Vars" :
                             {
                                 "bg" : "#f46fff",
-                                "header" : "FASTEST LAP",
+                                "header" : "[FASTEST LAP]",
                                 "main" : "{Session.FastestLapDriver.Name}",
                                 "data" : "{Session.FastestLapTime}"
                             }
@@ -283,7 +283,7 @@
                             "Vars" :
                             {
                                 "bg" : "{DriverDayRaceStickerBackground}",
-                                "header" : "DRIVER OF THE DAY",
+                                "header" : "[DRIVER OF THE DAY]",
                                 "main" : "{Session.DriverDayDriver.Name}",
                                 "data" : ""
                             }

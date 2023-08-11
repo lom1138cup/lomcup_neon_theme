@@ -71,7 +71,7 @@
                         {
                             "Template": {
                                 "BlockType": "text",
-                                "Source": "{Item.Position, Converter=NumberSubtract, Parameter=4}",
+                                "Source": "{Item.Position}",
                                 "HorizontalAlignment": "Center",
                                 "VerticalAlignment": "Center",
                                 "FontName": "{FontNameItalic}",
@@ -239,7 +239,7 @@
             },
             {
                 "BlockType": "text",
-                "Source": "All Times are in {TimeZone}",
+                "Source": "[All Times are in] {TimeZone}",
                 "HorizontalAlignment": "Center",
                 "MarginTop": 10,
                 "FontName": "{FontNameItalic}",
